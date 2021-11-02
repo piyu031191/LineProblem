@@ -4,9 +4,38 @@ import java.util.Scanner;
 
 
 public class LineProblem {
+       public double equals(double x3, double y3, double x4, double y4, double length) {
+		
+		double length2 = Math.sqrt( Math.pow((x4 - x3), 2) + Math.pow((y4 - y3), 2));
+		
+		if (length1 == length2) {
+			System.out.println(" The two lines are equal ");
+		}
+		else {
+			System.out.println(" The two lines are not equal");
+		}
+		
+		return length2;
+}
+
+      public void compareTo (double length1, double length2) {
+	
+	if (length1 == length2) {
+		System.out.println(" The two lines are equal in length");
+	}
+	
+	else if (length1 > length2) {
+		System.out.println(" The first line is greater than the second. ");
+	}
+	
+	else {
+		System.out.println(" The second line is greater than the first. ");
+	}
+}
 
 	public static void main(String[] args) {
-
+		
+		LineProblem obj = new LineProblem();
 		Scanner read = new Scanner(System.in);
 		
 		System.out.print(" Enter x1: ");
@@ -41,22 +70,12 @@ public class LineProblem {
         double length2 = Math.sqrt( Math.pow((x4 - x3), 2) + Math.pow((y4 - y3), 2));
 		System.out.println(" The Length of lines is "+length2);		
 		
-		
+		obj.compareTo(length1, length2);		
+
 		
 		
 	}
 
 }
 
-public void equals() {
-      if ( length1==length2 ) {
-	
-	         System.out.println(" The two lines are equal ");
 
-       }
-      else {
-	
-	          System.out.println(" The two lines are not equal");
-	          System.out.println(" Second line length: " + length2);
-
-       }
